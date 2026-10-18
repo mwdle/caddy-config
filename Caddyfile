@@ -230,7 +230,7 @@ jenkins.mwdle.com {
 #}
 
 vault.mwdle.com {
-        reverse_proxy vaultwarden:80
+        reverse_proxy vaultwarden:8080
         import required
         import cors
         import perms
