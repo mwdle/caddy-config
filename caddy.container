@@ -4,6 +4,7 @@ Pull=never
 ContainerName=caddy
 
 Network=cloudflare-tunnel
+Network=forgejo:alias=jenkins.mwdle.com
 Network=jenkins:alias=git.mwdle.com,alias=vault.mwdle.com
 Network=nextcloud
 Network=vaultwarden
