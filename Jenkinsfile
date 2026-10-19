@@ -7,11 +7,13 @@ quadletPipeline(
     podmanSecretMappings: [
         [
             type: 'string',
-            credentialsId: 'caddy_cloudflare_api_token'
+            credentialsId: 'caddy-cloudflare-api-token',
+            podmanSecretStringName: 'caddy_cloudflare_api_token'
         ],
         [
             type: 'string',
-            credentialsId: 'caddy_email'
+            credentialsId: 'caddy-email',
+            podmanSecretStringName: 'caddy_email'
         ]
     ]
 )
