@@ -1,7 +1,8 @@
 {
+        acme_dns cloudflare {file./run/secrets/cloudflare_api_token}
         admin off
         email {file./run/secrets/email}
-        acme_dns cloudflare {file./run/secrets/cloudflare_api_token}
+        grace_period 15s
         servers {
                 # Trust the Cloudflare Tunnel network subnet so Caddy can accept forwarded client IPs
                 trusted_proxies static 10.90.0.0/24
