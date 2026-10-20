@@ -3,6 +3,9 @@
         admin off
         email {file./run/secrets/email}
         grace_period 15s
+        log {
+                format console
+        }
         servers {
                 # Trust the Cloudflare Tunnel network subnet so Caddy can accept forwarded client IPs
                 trusted_proxies static 10.90.0.0/24
