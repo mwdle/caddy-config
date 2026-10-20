@@ -213,26 +213,6 @@ ntfy.mwdle.com {
         import ntfy_csp
 }
 
-#(openwebui_csp) {
-#        header {
-#                ?Content-Security-Policy "default-src 'none'; frame-src 'none'; manifest-src 'self'; object-src 'none'; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https://img.shields.io https://*.blob.core.windows.net; media-src 'self'; frame-ancestors 'none'; form-action 'none'; connect-src 'self'; worker-src 'self' blob:;"
-#        }
-#}
-#
-#(openwebui_perms) {
-#        header {
-#                ?Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), bluetooth=(), camera=(), display-capture=(self), encrypted-media=(), fullscreen=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), storage-access=(), speaker-selection=(), usb=(), web-share=(), xr-spatial-tracking=()"
-#        }
-#}
-#
-#chat.mwdle.com {
-#        reverse_proxy OpenWebUI:8080
-#        import required
-#        import cors
-#        import openwebui_perms
-#        import openwebui_csp
-#}
-
 vault.mwdle.com {
         reverse_proxy vaultwarden:8080
         import required
