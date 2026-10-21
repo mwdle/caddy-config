@@ -4,7 +4,10 @@
         email {file./run/secrets/email}
         grace_period 15s
         log {
-                format console
+                format console {
+                        time_format wall
+                        time_local
+                }
         }
         servers {
                 # Trust the Cloudflare Tunnel network subnet so Caddy can accept forwarded client IPs

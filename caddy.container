@@ -19,6 +19,8 @@ PublishPort=443:443/udp
 Secret=caddy_cloudflare_api_token,target=cloudflare_api_token,uid=1000,gid=1000,mode=0400
 Secret=caddy_email,target=email,uid=1000,gid=1000,mode=0400
 
+Timezone=local
+
 Volume=caddy-config:/config:U,Z
 Volume=caddy-data:/data:U,Z
 Volume=./Caddyfile:/etc/caddy/Caddyfile:ro,Z
