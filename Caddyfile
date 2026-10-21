@@ -67,18 +67,6 @@ http://127.0.0.1:8888 {
         }
 }
 
-# TODO: remove the following wildcard after Docker -> Podman migration is complete
-*.mwdle.com {
-	reverse_proxy host.containers.internal:8443 {
-		header_up Host {hostport}
-
-		transport http {
-			tls
-			tls_server_name {host}
-		}
-	}
-}
-
 (esphome_perms) {
         header {
                 ?Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), bluetooth=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(self), storage-access=(), speaker-selection=(), usb=(), web-share=(), xr-spatial-tracking=()"
