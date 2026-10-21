@@ -67,6 +67,18 @@ http://127.0.0.1:8888 {
         }
 }
 
+lb.mwdle.com {
+        reverse_proxy host.containers.internal:9090 {
+                transport http {
+                        tls_insecure_skip_verify
+                }
+        }
+        import required
+        import cors
+        import perms
+}
+
+
 (esphome_perms) {
         header {
                 ?Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), bluetooth=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(self), storage-access=(), speaker-selection=(), usb=(), web-share=(), xr-spatial-tracking=()"
@@ -117,7 +129,7 @@ frigate.mwdle.com {
         reverse_proxy /api/webrtc* frigate:1984
         reverse_proxy Frigate:8971 {
                 transport http {
-                        tls_insecure_skip_verify # Frigate serves https on port 8971 with self signed certficate - skip verification
+                        tls_insecure_skip_verify
                 }
         }
         import required
@@ -206,7 +218,6 @@ vault.mwdle.com {
         import required
         import cors
         import perms
-        import csp # fallback - Vaultwarden already provides a CSP
 }
 
 (vpa_csp) {
