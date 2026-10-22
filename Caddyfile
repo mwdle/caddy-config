@@ -70,7 +70,7 @@ http://127.0.0.1:8888 {
         }
 }
 
-lb.mwdle.com {
+lab.mwdle.com {
         reverse_proxy host.containers.internal:9090 {
                 transport http {
                         tls_insecure_skip_verify
