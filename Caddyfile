@@ -11,7 +11,7 @@
         }
         servers {
                 # Trust the Cloudflare Tunnel network subnet so Caddy can accept forwarded client IPs
-                trusted_proxies static 10.90.0.0/24
+                trusted_proxies static 10.89.0.0/16
                 trusted_proxies_strict
                 client_ip_headers Cf-Connecting-Ip X-Forwarded-For X-Real-IP
         }
