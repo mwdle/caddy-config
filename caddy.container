@@ -6,6 +6,7 @@ ContainerName=caddy
 Network=cloudflare-tunnel
 Network=forgejo:alias=jenkins.mwdle.com
 Network=frigate
+Network=glances
 Network=jenkins:alias=git.mwdle.com,alias=vault.mwdle.com
 Network=nextcloud
 Network=ntfy
