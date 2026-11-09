@@ -128,7 +128,7 @@ git.mwdle.com {
 
 frigate.mwdle.com {
         reverse_proxy /api/webrtc* frigate:1984
-        reverse_proxy Frigate:8971 {
+        reverse_proxy frigate:8971 {
                 transport http {
                         tls_insecure_skip_verify
                 }
