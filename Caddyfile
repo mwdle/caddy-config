@@ -18,7 +18,7 @@
 }
 
 http://127.0.0.1:8888 {
-    respond /health "OK" 200
+        respond /health "OK" 200
 }
 
 (required) {
@@ -80,7 +80,6 @@ lab.mwdle.com {
         import cors
         import perms
 }
-
 
 (esphome_perms) {
         header {
