@@ -142,7 +142,6 @@ git.mwdle.com {
 }
 
 frigate.mwdle.com {
-        reverse_proxy /api/webrtc* frigate:1984
         reverse_proxy frigate:8971 {
                 transport http {
                         tls_insecure_skip_verify
@@ -152,6 +151,14 @@ frigate.mwdle.com {
         import cors
         import frigate_perms
         import frigate_csp
+}
+
+go2rtc.mwdle.com {
+        reverse_proxy frigate:1984
+        import required
+        import cors
+        import perms
+        import csp
 }
 
 # Glances
