@@ -6,7 +6,7 @@
       "customType": "regex",
       "managerFilePatterns": ["**/Containerfile"],
       "matchStrings": [
-        "xcaddy build\\s+--with\\s+(?<depName>[^\\s@]+)@(?<currentValue>[^\\s]+)"
+        "--with\\s+(?<depName>[^\\s@]+)@(?<currentValue>[^\\s]+)"
       ],
       "datasourceTemplate": "go"
     }
