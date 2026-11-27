@@ -1,7 +1,7 @@
 # Globals
 
 {
-        acme_dns cloudflare {file./run/secrets/cloudflare_api_token}
+        acme_dns cloudflare {file./run/secrets/cloudflare_token}
         admin off
         email {file./run/secrets/email}
         grace_period 15s
